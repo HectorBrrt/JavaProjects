@@ -3,39 +3,39 @@ import java.util.Scanner;
 public class Calculadora {
     public static void main(String[] args) {
         System.out.print("Menu de opcoes:\n");
-        System.out.println("\t1 para somar\n\t2 para subtrair\n\t3 para multiplicar\n\t4 para dividir.");
+        System.out.println("\t+ para somar\n\t- para subtrair\n\t* para multiplicar\n\t/ para dividir.\n");
 
-        float c;
         Scanner numero = new Scanner(System.in);
-        System.out.print("Digite o primeiro numero: ");
-        int a = numero.nextInt();
-
-        int o;
+        System.out.print("Digite o primero numero: ");
+        float a = numero.nextFloat();
+        char o;
         do {
-            numero = new Scanner(System.in);
-            System.out.print("Digite a opcao: ");
-            o = numero.nextInt();
-            if(o != 1 && o != 2 && o != 3 && o != 4)
-                System.out.println("Erro, opcao invalida!");
 
-        } while (o != 1 && o != 2 && o != 3 && o != 4);
+            Scanner opcao = new Scanner(System.in);
+            System.out.print("Digite a opcao: ");
+            o = opcao.next().charAt(0);
+            if(o != '+' && o != '-' && o != '*' && o != '/')
+                System.out.println("Opcao Invalida!");
+
+        }while(o != '+' && o != '-' && o != '*' && o != '/');
 
         System.out.print("Digite o segundo numero: ");
-        int b = numero.nextInt();
+        float b = numero.nextFloat();
 
+        float c;
 
-        if (o == 1) {
+        if (o == '+') 
             c = a + b;
-            System.out.println(a + " + " + b + " = " + c);
-        } else if (o == 2) {
+        
+        else if(o == '-') 
             c = a - b;
-            System.out.println(a + " - " + b + " = " + c);
-        } else if (o == 3) {
+        
+        else if(o == '*') 
             c = a * b;
-            System.out.println(a + " * " + b + " = " + c);
-        } else{
+        
+        else 
             c = a / b;
-            System.out.println(a + " / " + b + " = " + c);
-        }
+        
+        System.out.printf("%.2f %c %.2f = %.2f", a, o, b, c);
     }
 }
