@@ -10,7 +10,6 @@ public class Calculadora {
         float a = numero.nextFloat();
         char o;
         do {
-
             Scanner opcao = new Scanner(System.in);
             System.out.print("Digite a opcao: ");
             o = opcao.next().charAt(0);
