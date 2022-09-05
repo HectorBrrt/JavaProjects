@@ -4,12 +4,10 @@ public class Fatorial {
     public static void main(String[] args) {
         Scanner numero = new Scanner(System.in);
         System.out.print("Digite um numero para saber seu fatorial: ");
-
         int n = numero.nextInt();
         int i = 2;
         int fat = 1;
         int j = n;
-
         while( i <=n ){
             fat = fat * i;
             i++;
