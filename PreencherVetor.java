@@ -4,7 +4,6 @@ public class PrencherVetor {
     public static void main(String[] args) {
         int[] vet = {0,0,0,0,0,0,0,0,0,0};
         int o, n, i, j, aux;
-
         do{
             Scanner s = new Scanner(System.in);
             System.out.println("""
@@ -48,7 +47,6 @@ public class PrencherVetor {
                         vet[j] = aux;
                     }
                 }
-
                 for(i=0; i<10; i++)
                     System.out.print("[" + vet[i] + "] ");
             }
