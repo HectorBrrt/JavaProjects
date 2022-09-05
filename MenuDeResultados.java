@@ -24,7 +24,6 @@ public class MenuDeResultados {
                 acima++;
             if(numero > 0)
                 soma += numero;
-
         }while (numero !=0);
         if(soma > 0) {
             media = soma / (contador - 1);
